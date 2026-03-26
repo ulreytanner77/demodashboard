@@ -107,10 +107,10 @@ export function OperationsTab() {
         {/* Throughput Trend */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-semibold text-card-foreground">
+            <CardTitle className="text-3xl font-bold text-card-foreground">
               Throughput Trend
             </CardTitle>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Actual vs. maximum capacity (K units)
             </p>
           </CardHeader>
@@ -126,16 +126,16 @@ export function OperationsTab() {
                   <XAxis
                     dataKey="month"
                     tick={{
-                      fontSize: 11,
-                      fill: "#B8BFCD",
+                      fontSize: 16,
+                      fill: "#E2E8F0",
                     }}
                     axisLine={{ stroke: "#2F3E4D" }}
                     tickLine={false}
                   />
                   <YAxis
                     tick={{
-                      fontSize: 11,
-                      fill: "#B8BFCD",
+                      fontSize: 16,
+                      fill: "#E2E8F0",
                     }}
                     axisLine={false}
                     tickLine={false}
@@ -145,11 +145,11 @@ export function OperationsTab() {
                       backgroundColor: "#1A202C",
                       border: "1px solid #2F3E4D",
                       borderRadius: "6px",
-                      fontSize: "12px",
+                      fontSize: "14px",
                     }}
                   />
                   <Legend
-                    wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }}
+                    wrapperStyle={{ fontSize: "16px", color: "#F1F5F9", paddingTop: "8px" }}
                   />
                   <Area
                     isAnimationActive={false}
@@ -183,10 +183,10 @@ export function OperationsTab() {
           {/* Equipment Utilization */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-sm font-semibold text-card-foreground">
+              <CardTitle className="text-3xl font-bold text-card-foreground">
                 Equipment Utilization
               </CardTitle>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Current shift performance (%)
               </p>
             </CardHeader>
@@ -203,8 +203,8 @@ export function OperationsTab() {
                       type="number"
                       domain={[0, 100]}
                       tick={{
-                        fontSize: 10,
-                        fill: "#B8BFCD",
+                        fontSize: 16,
+                        fill: "#E2E8F0",
                       }}
                       axisLine={false}
                       tickLine={false}
@@ -212,10 +212,10 @@ export function OperationsTab() {
                     <YAxis
                       type="category"
                       dataKey="line"
-                      width={100}
+                      width={150}
                       tick={{
-                        fontSize: 10,
-                        fill: "#B8BFCD",
+                        fontSize: 18,
+                        fill: "#E2E8F0",
                       }}
                       axisLine={false}
                       tickLine={false}
@@ -225,7 +225,7 @@ export function OperationsTab() {
                         backgroundColor: "#1A202C",
                         border: "1px solid #2F3E4D",
                         borderRadius: "6px",
-                        fontSize: "12px",
+                        fontSize: "14px",
                       }}
                     />
                     <Bar
@@ -245,10 +245,10 @@ export function OperationsTab() {
           {/* Downtime Breakdown */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-sm font-semibold text-card-foreground">
+              <CardTitle className="text-3xl font-bold text-card-foreground">
                 Downtime Breakdown
               </CardTitle>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Hours by category per quarter
               </p>
             </CardHeader>
@@ -264,16 +264,16 @@ export function OperationsTab() {
                     <XAxis
                       dataKey="month"
                       tick={{
-                        fontSize: 10,
-                        fill: "#B8BFCD",
+                        fontSize: 16,
+                        fill: "#E2E8F0",
                       }}
                       axisLine={{ stroke: "#2F3E4D" }}
                       tickLine={false}
                     />
                     <YAxis
                       tick={{
-                        fontSize: 10,
-                        fill: "#B8BFCD",
+                        fontSize: 16,
+                        fill: "#E2E8F0",
                       }}
                       axisLine={false}
                       tickLine={false}
@@ -283,11 +283,11 @@ export function OperationsTab() {
                         backgroundColor: "#1A202C",
                         border: "1px solid #2F3E4D",
                         borderRadius: "6px",
-                        fontSize: "12px",
+                        fontSize: "14px",
                       }}
                     />
                     <Legend
-                      wrapperStyle={{ fontSize: "10px", paddingTop: "8px" }}
+                      wrapperStyle={{ fontSize: "16px", color: "#F1F5F9", paddingTop: "8px" }}
                     />
                     <Bar
                     isAnimationActive={false}
@@ -323,10 +323,10 @@ export function OperationsTab() {
         {/* Workforce Allocation Table */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-semibold text-card-foreground">
+            <CardTitle className="text-3xl font-bold text-card-foreground">
               Workforce Allocation
             </CardTitle>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Current staffing by department (38 total)
             </p>
           </CardHeader>
@@ -335,19 +335,19 @@ export function OperationsTab() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-muted/50">
-                    <th className="px-4 py-2.5 text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    <th className="px-4 py-2.5 text-left text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                       Department
                     </th>
-                    <th className="px-4 py-2.5 text-right text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    <th className="px-4 py-2.5 text-right text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                       Headcount
                     </th>
-                    <th className="px-4 py-2.5 text-right text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    <th className="px-4 py-2.5 text-right text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                       Utilization
                     </th>
-                    <th className="px-4 py-2.5 text-right text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    <th className="px-4 py-2.5 text-right text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                       Overtime
                     </th>
-                    <th className="px-4 py-2.5 text-right text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    <th className="px-4 py-2.5 text-right text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                       Open Roles
                     </th>
                   </tr>
@@ -361,16 +361,16 @@ export function OperationsTab() {
                       <td className="px-4 py-2.5 font-medium text-card-foreground">
                         {row.department}
                       </td>
-                      <td className="px-4 py-2.5 text-right text-card-foreground font-mono text-xs">
+                      <td className="px-4 py-2.5 text-right text-card-foreground font-mono text-sm">
                         {row.headcount}
                       </td>
-                      <td className="px-4 py-2.5 text-right text-card-foreground font-mono text-xs">
+                      <td className="px-4 py-2.5 text-right text-card-foreground font-mono text-sm">
                         {row.utilization}
                       </td>
-                      <td className="px-4 py-2.5 text-right text-card-foreground font-mono text-xs">
+                      <td className="px-4 py-2.5 text-right text-card-foreground font-mono text-sm">
                         {row.overtime}
                       </td>
-                      <td className="px-4 py-2.5 text-right text-card-foreground font-mono text-xs">
+                      <td className="px-4 py-2.5 text-right text-card-foreground font-mono text-sm">
                         {row.openRoles}
                       </td>
                     </tr>
@@ -391,10 +391,10 @@ export function OperationsTab() {
                 <MessageSquare className="size-4 text-accent" />
               </div>
               <div>
-                <CardTitle className="text-sm font-semibold text-card-foreground">
+                <CardTitle className="text-3xl font-bold text-card-foreground">
                   Ask Northstar AI
                 </CardTitle>
-                <p className="text-[11px] text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Operational intelligence assistant
                 </p>
               </div>
@@ -406,16 +406,16 @@ export function OperationsTab() {
               <div key={i} className="flex flex-col gap-2">
                 <div className="flex items-start gap-2 rounded-md bg-primary/5 border border-primary/10 p-3">
                   <div className="shrink-0 mt-0.5 size-5 rounded-full bg-chart-1 flex items-center justify-center">
-                    <span className="text-[9px] font-bold text-primary-foreground">
+                    <span className="text-[11px] font-bold text-primary-foreground">
                       JM
                     </span>
                   </div>
-                  <p className="text-xs font-medium text-card-foreground italic">
+                  <p className="text-sm font-medium text-card-foreground italic">
                     {`"${insight.prompt}"`}
                   </p>
                 </div>
                 <div className="rounded-md bg-card border border-border p-3">
-                  <p className="text-xs leading-relaxed text-card-foreground">
+                  <p className="text-sm leading-relaxed text-card-foreground">
                     {insight.response}
                   </p>
                 </div>
@@ -427,7 +427,7 @@ export function OperationsTab() {
               <input
                 type="text"
                 placeholder="Ask about operations data..."
-                className="flex-1 bg-transparent text-xs text-card-foreground placeholder:text-muted-foreground outline-none"
+                className="flex-1 bg-transparent text-sm text-card-foreground placeholder:text-muted-foreground outline-none"
                 readOnly
               />
               <button className="flex items-center justify-center size-7 rounded-md bg-accent text-accent-foreground hover:bg-accent/90 transition-colors">
@@ -443,7 +443,7 @@ export function OperationsTab() {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-muted px-2.5 py-1 text-[10px] font-medium text-muted-foreground"
+                  className="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground"
                 >
                   {tag}
                 </span>

@@ -253,7 +253,7 @@ export function ExecutiveOverview() {
             }}
           >
             <CardHeader className="pb-2 px-0">
-              <span className="text-sm font-medium uppercase tracking-wider text-muted-foreground text-center block">
+              <span className="text-base font-semibold uppercase tracking-wider text-muted-foreground text-center block">
                 {kpi.title}
               </span>
             </CardHeader>
@@ -263,7 +263,7 @@ export function ExecutiveOverview() {
                   {kpi.value}
                 </span>
                 <span
-                  className="flex items-center gap-0.5 text-xs font-semibold justify-center"
+                  className="flex items-center gap-0.5 text-sm font-semibold justify-center"
                   style={{
                     color:
                       kpi.trend === "up"
@@ -279,7 +279,7 @@ export function ExecutiveOverview() {
                   {kpi.change}
                 </span>
               </div>
-              <p className="text-xs text-muted-foreground mt-2">
+              <p className="text-sm text-muted-foreground mt-2">
                 {kpi.description}
               </p>
             </CardContent>
@@ -292,10 +292,10 @@ export function ExecutiveOverview() {
         {/* 12-Month Trend Line */}
         <Card className="col-span-2">
           <CardHeader>
-            <CardTitle className="text-sm font-semibold text-card-foreground">
+            <CardTitle className="text-3xl font-bold text-card-foreground">
               Production & Revenue Trend
             </CardTitle>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               12-month trailing performance
             </p>
           </CardHeader>
@@ -310,33 +310,33 @@ export function ExecutiveOverview() {
                   />
                   <XAxis
                     dataKey="month"
-                    tick={{ fontSize: 11, fill: "#B8BFCD" }}
+                    tick={{ fontSize: 16, fill: "#E2E8F0" }}
                     axisLine={{ stroke: "#2F3E4D" }}
                     tickLine={false}
                   />
                   <YAxis
                     yAxisId="left"
-                    tick={{ fontSize: 11, fill: "#B8BFCD" }}
+                    tick={{ fontSize: 16, fill: "#E2E8F0" }}
                     axisLine={false}
                     tickLine={false}
                     label={{
                       value: "Units (K)",
                       angle: -90,
                       position: "insideLeft",
-                      style: { fontSize: 10, fill: "#B8BFCD" },
+                      style: { fontSize: 16, fill: "#E2E8F0" },
                     }}
                   />
                   <YAxis
                     yAxisId="right"
                     orientation="right"
-                    tick={{ fontSize: 11, fill: "#B8BFCD" }}
+                    tick={{ fontSize: 16, fill: "#E2E8F0" }}
                     axisLine={false}
                     tickLine={false}
                     label={{
                       value: "Revenue ($K)",
                       angle: 90,
                       position: "insideRight",
-                      style: { fontSize: 10, fill: "#B8BFCD" },
+                      style: { fontSize: 16, fill: "#E2E8F0" },
                     }}
                   />
                   <Tooltip
@@ -344,11 +344,11 @@ export function ExecutiveOverview() {
                       backgroundColor: "#1A202C",
                       border: "1px solid #2F3E4D",
                       borderRadius: "6px",
-                      fontSize: "12px",
+                      fontSize: "14px",
                     }}
                   />
                   <Legend
-                    wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }}
+                    wrapperStyle={{ fontSize: "16px", color: "#F1F5F9", paddingTop: "8px" }}
                   />
                   <Line
                     isAnimationActive={false}
@@ -381,10 +381,10 @@ export function ExecutiveOverview() {
         {/* Segment Performance */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-semibold text-card-foreground">
+            <CardTitle className="text-3xl font-bold text-card-foreground">
               Segment Performance
             </CardTitle>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Revenue vs. target ($M)
             </p>
           </CardHeader>
@@ -403,15 +403,15 @@ export function ExecutiveOverview() {
                   />
                   <XAxis
                     type="number"
-                    tick={{ fontSize: 11, fill: "#B8BFCD" }}
+                    tick={{ fontSize: 16, fill: "#E2E8F0" }}
                     axisLine={false}
                     tickLine={false}
                   />
                   <YAxis
                     type="category"
                     dataKey="segment"
-                    width={110}
-                    tick={{ fontSize: 11, fill: "#B8BFCD" }}
+                    width={180}
+                    tick={{ fontSize: 18, fill: "#E2E8F0" }}
                     axisLine={false}
                     tickLine={false}
                   />
@@ -420,11 +420,11 @@ export function ExecutiveOverview() {
                       backgroundColor: "#1A202C",
                       border: "1px solid #2F3E4D",
                       borderRadius: "6px",
-                      fontSize: "12px",
+                      fontSize: "14px",
                     }}
                   />
                   <Legend
-                    wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }}
+                    wrapperStyle={{ fontSize: "16px", color: "#F1F5F9", paddingTop: "8px" }}
                   />
                   <Bar
                     isAnimationActive={false}
@@ -458,10 +458,10 @@ export function ExecutiveOverview() {
               <Brain className="size-4 text-accent" />
             </div>
             <div className="flex-1">
-              <CardTitle className="text-sm font-semibold text-card-foreground">
+              <CardTitle className="text-3xl font-bold text-card-foreground">
                 AI Data Modeling
               </CardTitle>
-              <p className="text-xs text-muted-foreground mt-0.5">
+              <p className="text-sm text-muted-foreground mt-0.5">
                 Run predictive models on your manufacturing data
               </p>
             </div>
@@ -490,7 +490,7 @@ export function ExecutiveOverview() {
                 {modelState === "running" ? "Running..." : "Run Model"}
               </button>
               {modelState === "complete" && (
-                <Badge variant="outline" className="gap-1 text-[10px] border-[var(--positive)]/30 text-[var(--positive)]">
+                <Badge variant="outline" className="gap-1 text-xs border-[var(--positive)]/30 text-[var(--positive)]">
                   <CheckCircle2 className="size-3" />
                   Complete
                 </Badge>
@@ -500,7 +500,7 @@ export function ExecutiveOverview() {
         </CardHeader>
         <CardContent>
           {/* Model description */}
-          <p className="text-xs text-muted-foreground mb-4">
+          <p className="text-sm text-muted-foreground mb-4">
             {config.description}
           </p>
 
@@ -508,14 +508,14 @@ export function ExecutiveOverview() {
           {modelState === "running" && (
             <div className="rounded-md bg-card border border-border p-6">
               <div className="flex flex-col items-center gap-4">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2 text-base text-muted-foreground">
                   <Loader2 className="size-4 animate-spin text-accent" />
                   Running {config.name}...
                 </div>
                 <div className="w-full max-w-md">
                   <Progress value={progress} className="h-2" />
                 </div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   Analyzing data points and generating predictions — {progress}%
                 </p>
               </div>
@@ -529,10 +529,10 @@ export function ExecutiveOverview() {
                 <div className="flex items-center justify-center size-12 rounded-full bg-accent/10">
                   <Brain className="size-6 text-accent/60" />
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   Select a model and click <strong className="text-card-foreground">Run Model</strong> to generate predictions
                 </p>
-                <p className="text-xs text-muted-foreground max-w-md">
+                <p className="text-sm text-muted-foreground max-w-md">
                   Models use historical manufacturing data to produce forecasts, identify optimization opportunities, and surface actionable insights.
                 </p>
               </div>
@@ -545,10 +545,10 @@ export function ExecutiveOverview() {
               {/* Forecast Chart */}
               <div className="col-span-2 rounded-md bg-card border border-border p-4">
                 <div className="flex items-center justify-between mb-3">
-                  <h4 className="text-xs font-semibold text-card-foreground">
+                  <h4 className="text-lg font-bold text-card-foreground">
                     Forecast: Actual vs. Predicted
                   </h4>
-                  <span className="text-[10px] text-muted-foreground">
+                  <span className="text-sm text-muted-foreground">
                     Dashed line = projected values
                   </span>
                 </div>
@@ -562,19 +562,19 @@ export function ExecutiveOverview() {
                       />
                       <XAxis
                         dataKey="period"
-                        tick={{ fontSize: 10, fill: "#B8BFCD" }}
+                        tick={{ fontSize: 16, fill: "#E2E8F0" }}
                         axisLine={{ stroke: "#2F3E4D" }}
                         tickLine={false}
                       />
                       <YAxis
-                        tick={{ fontSize: 10, fill: "#B8BFCD" }}
+                        tick={{ fontSize: 16, fill: "#E2E8F0" }}
                         axisLine={false}
                         tickLine={false}
                         label={{
                           value: config.yAxisLabel,
                           angle: -90,
                           position: "insideLeft",
-                          style: { fontSize: 10, fill: "#B8BFCD" },
+                          style: { fontSize: 16, fill: "#E2E8F0" },
                         }}
                       />
                       <Tooltip
@@ -582,11 +582,11 @@ export function ExecutiveOverview() {
                           backgroundColor: "#1A202C",
                           border: "1px solid #2F3E4D",
                           borderRadius: "6px",
-                          fontSize: "11px",
+                          fontSize: "14px",
                         }}
                       />
                       <Legend
-                        wrapperStyle={{ fontSize: "10px", paddingTop: "8px" }}
+                        wrapperStyle={{ fontSize: "16px", color: "#F1F5F9", paddingTop: "8px" }}
                       />
                       <Line
                     isAnimationActive={false}
@@ -615,7 +615,7 @@ export function ExecutiveOverview() {
 
               {/* Model Metrics & Insights */}
               <div className="rounded-md bg-card border border-border p-4 flex flex-col gap-4">
-                <h4 className="text-xs font-semibold text-card-foreground">
+                <h4 className="text-lg font-bold text-card-foreground">
                   Model Output
                 </h4>
 
@@ -623,28 +623,28 @@ export function ExecutiveOverview() {
                 <div className="flex flex-col gap-3">
                   <div>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-[11px] text-muted-foreground">Accuracy (R²)</span>
-                      <span className="text-xs font-mono font-semibold text-card-foreground">{config.metrics.r2}</span>
+                      <span className="text-sm text-muted-foreground">Accuracy (R²)</span>
+                      <span className="text-sm font-mono font-semibold text-card-foreground">{config.metrics.r2}</span>
                     </div>
                     <Progress value={config.metrics.r2 * 100} className="h-1.5" />
                   </div>
                   <div>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-[11px] text-muted-foreground">Mean Error (MAPE)</span>
-                      <span className="text-xs font-mono font-semibold text-card-foreground">{config.metrics.mape}%</span>
+                      <span className="text-sm text-muted-foreground">Mean Error (MAPE)</span>
+                      <span className="text-sm font-mono font-semibold text-card-foreground">{config.metrics.mape}%</span>
                     </div>
                     <Progress value={100 - config.metrics.mape * 5} className="h-1.5" />
                   </div>
                   <div>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-[11px] text-muted-foreground">Confidence Level</span>
-                      <span className="text-xs font-mono font-semibold text-card-foreground">{config.metrics.confidence}%</span>
+                      <span className="text-sm text-muted-foreground">Confidence Level</span>
+                      <span className="text-sm font-mono font-semibold text-card-foreground">{config.metrics.confidence}%</span>
                     </div>
                     <Progress value={config.metrics.confidence} className="h-1.5" />
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] text-muted-foreground">Forecast Horizon</span>
-                    <span className="text-xs font-mono font-semibold text-card-foreground">{config.metrics.horizon}</span>
+                    <span className="text-sm text-muted-foreground">Forecast Horizon</span>
+                    <span className="text-sm font-mono font-semibold text-card-foreground">{config.metrics.horizon}</span>
                   </div>
                 </div>
 
@@ -653,10 +653,10 @@ export function ExecutiveOverview() {
 
                 {/* Key Findings */}
                 <div>
-                  <h5 className="text-[11px] font-semibold text-card-foreground mb-2">Key Findings</h5>
+                  <h5 className="text-sm font-semibold text-card-foreground mb-2">Key Findings</h5>
                   <ul className="flex flex-col gap-2">
                     {config.insights.map((insight, i) => (
-                      <li key={i} className="text-[11px] leading-relaxed text-muted-foreground flex gap-2">
+                      <li key={i} className="text-sm leading-relaxed text-muted-foreground flex gap-2">
                         <span className="text-accent mt-0.5 shrink-0">&#8226;</span>
                         <span>{insight}</span>
                       </li>

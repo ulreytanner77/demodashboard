@@ -59,10 +59,10 @@ export function MarketTab() {
         {/* Industry Demand Trend */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-semibold text-card-foreground">
+            <CardTitle className="text-3xl font-bold text-card-foreground">
               Industry Demand Index
             </CardTitle>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Indexed demand trends across key sectors (base = 100)
             </p>
           </CardHeader>
@@ -78,16 +78,16 @@ export function MarketTab() {
                   <XAxis
                     dataKey="month"
                     tick={{
-                      fontSize: 11,
-                      fill: "#B8BFCD",
+                      fontSize: 16,
+                      fill: "#E2E8F0",
                     }}
                     axisLine={{ stroke: "#2F3E4D" }}
                     tickLine={false}
                   />
                   <YAxis
                     tick={{
-                      fontSize: 11,
-                      fill: "#B8BFCD",
+                      fontSize: 16,
+                      fill: "#E2E8F0",
                     }}
                     axisLine={false}
                     tickLine={false}
@@ -98,11 +98,11 @@ export function MarketTab() {
                       backgroundColor: "#1A202C",
                       border: "1px solid #2F3E4D",
                       borderRadius: "6px",
-                      fontSize: "12px",
+                      fontSize: "14px",
                     }}
                   />
                   <Legend
-                    wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }}
+                    wrapperStyle={{ fontSize: "16px", color: "#F1F5F9", paddingTop: "8px" }}
                   />
                   <Line
                     isAnimationActive={false}
@@ -141,10 +141,10 @@ export function MarketTab() {
         {/* Service Area Map */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-semibold text-card-foreground">
+            <CardTitle className="text-3xl font-bold text-card-foreground">
               Service Area
             </CardTitle>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Customer concentration and revenue distribution
             </p>
           </CardHeader>
@@ -215,7 +215,7 @@ export function MarketTab() {
                   y="120"
                   textAnchor="middle"
                   dy="-8"
-                  fontSize="12"
+                  fontSize="18"
                   fontWeight="600"
                   fill="#00D9FF"
                   opacity="0.9"
@@ -226,7 +226,7 @@ export function MarketTab() {
                   x="150"
                   y="132"
                   textAnchor="middle"
-                  fontSize="10"
+                  fontSize="16"
                   fill="#B8BFCD"
                   opacity="0.8"
                 >
@@ -237,7 +237,7 @@ export function MarketTab() {
                   x="150"
                   y="75"
                   textAnchor="middle"
-                  fontSize="11"
+                  fontSize="17"
                   fontWeight="600"
                   fill="#00B4D8"
                   opacity="0.8"
@@ -249,7 +249,7 @@ export function MarketTab() {
                   x="150"
                   y="195"
                   textAnchor="middle"
-                  fontSize="11"
+                  fontSize="17"
                   fontWeight="600"
                   fill="#4A5F6F"
                   opacity="0.6"
@@ -259,7 +259,7 @@ export function MarketTab() {
               </svg>
 
               {/* Legend */}
-              <div className="absolute bottom-3 left-3 flex flex-col gap-2 text-xs">
+              <div className="absolute bottom-3 left-3 flex flex-col gap-2 text-sm">
                 <div className="flex items-center gap-2">
                   <div
                     className="w-3 h-3 rounded-full"
@@ -301,10 +301,10 @@ export function MarketTab() {
         {/* Labor Market */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-semibold text-card-foreground">
+            <CardTitle className="text-3xl font-bold text-card-foreground">
               Labor Market Indicators
             </CardTitle>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Regional supply vs. demand index by skilled role
             </p>
           </CardHeader>
@@ -320,8 +320,8 @@ export function MarketTab() {
                   <XAxis
                     dataKey="metric"
                     tick={{
-                      fontSize: 10,
-                      fill: "#B8BFCD",
+                      fontSize: 16,
+                      fill: "#E2E8F0",
                     }}
                     axisLine={{ stroke: "#2F3E4D" }}
                     tickLine={false}
@@ -329,8 +329,8 @@ export function MarketTab() {
                   <YAxis
                     domain={[60, 100]}
                     tick={{
-                      fontSize: 10,
-                      fill: "#B8BFCD",
+                      fontSize: 16,
+                      fill: "#E2E8F0",
                     }}
                     axisLine={false}
                     tickLine={false}
@@ -340,11 +340,11 @@ export function MarketTab() {
                       backgroundColor: "#1A202C",
                       border: "1px solid #2F3E4D",
                       borderRadius: "6px",
-                      fontSize: "12px",
+                      fontSize: "14px",
                     }}
                   />
                   <Legend
-                    wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }}
+                    wrapperStyle={{ fontSize: "16px", color: "#F1F5F9", paddingTop: "8px" }}
                   />
                   <Bar
                     isAnimationActive={false}
@@ -371,10 +371,10 @@ export function MarketTab() {
         {/* Economic Indicators */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm font-semibold text-card-foreground">
+            <CardTitle className="text-3xl font-bold text-card-foreground">
               External Economic Indicators
             </CardTitle>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Key macroeconomic signals for manufacturing
             </p>
           </CardHeader>
@@ -390,8 +390,8 @@ export function MarketTab() {
                   <XAxis
                     dataKey="quarter"
                     tick={{
-                      fontSize: 10,
-                      fill: "#B8BFCD",
+                      fontSize: 16,
+                      fill: "#E2E8F0",
                     }}
                     axisLine={{ stroke: "#2F3E4D" }}
                     tickLine={false}
@@ -399,8 +399,8 @@ export function MarketTab() {
                   <YAxis
                     domain={[45, 85]}
                     tick={{
-                      fontSize: 10,
-                      fill: "#B8BFCD",
+                      fontSize: 16,
+                      fill: "#E2E8F0",
                     }}
                     axisLine={false}
                     tickLine={false}
@@ -410,11 +410,11 @@ export function MarketTab() {
                       backgroundColor: "#1A202C",
                       border: "1px solid #2F3E4D",
                       borderRadius: "6px",
-                      fontSize: "12px",
+                      fontSize: "14px",
                     }}
                   />
                   <Legend
-                    wrapperStyle={{ fontSize: "10px", paddingTop: "8px" }}
+                    wrapperStyle={{ fontSize: "16px", color: "#F1F5F9", paddingTop: "8px" }}
                   />
                   <Line
                     isAnimationActive={false}
